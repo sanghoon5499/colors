@@ -1,7 +1,7 @@
 # black
 
 Ever wanted a browser tab/window that's just black?  
-https://sanghoon5499.github.io/black/
+ https://sanghoon5499.github.io/Black-Screen/  
 
 
 Screenshots:
