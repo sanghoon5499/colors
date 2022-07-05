@@ -1,9 +1,108 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Black</title>
-      <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/68/Solid_black.png">
+      <title>Colors</title>
+      <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Color_circle_%28RGB%29.svg/1280px-Color_circle_%28RGB%29.svg.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet"> 
    </head>
-   <body style="background-color:black;"> 
+   <body id="currentBGColor" class="bgColor"> 
    </body>
+
+   <h2 class="button textColor" id="text"></h2>
+
+   <style>
+      .button {
+         border: none;
+         color: black;
+         padding: 2px 5px;
+         text-align: center;
+         font-size: 16px;
+         cursor: default;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         font-family: 'Poppins', sans-serif;
+         font-family: 'Source Code Pro', monospace;
+      }
+      .bgColor {
+         background-color:black;
+      }
+      .textColor {
+         background-color:black;
+      }
+   </style>
 </html>
+
+<script>
+   var currentBGColor = "black";
+   var stringColorInput = [];
+   let listColors = ["red", "orange", "yellow", "lime", "limegreen", 
+                     "green", "sky", "skyblue", "blue", "violet", 
+                     "purple", "black", "brown", "gray", "grey", 
+                     "white", "pink"];
+   var newColor = "";
+
+   // keydown is reserved for all keypresses
+   document.addEventListener("keydown", function(event){
+      var x = event.key;
+
+      // if the user hit backspace, pop a character off the array to delete the last character.
+      if (x == "Backspace") {
+         stringColorInput.pop();
+         document.getElementById("text").innerHTML = stringColorInput.join("").toUpperCase();
+
+         if (stringColorInput == "") {
+            document.getElementById("text").style.backgroundColor = currentBGColor;
+            console.log(currentBGColor)
+         }
+
+         console.log(stringColorInput)
+      }
+   });
+
+   // keypress is reserved for characters that produce any type of change on-screen. 
+   //  Eg. [A], [Spacebar], [Enter] works, but [Alt], [CapsLock] will not
+   document.addEventListener("keypress", function(event){
+      var x = event.key;
+
+      // If input is not the [Enter] key, add it to the array of characters
+      if (x != "Enter") {
+         document.getElementById("text").style.backgroundColor = "white"
+         stringColorInput.push(x);
+         document.getElementById("text").innerHTML = stringColorInput.join("").toUpperCase();
+      }
+
+      // If the user pressed the [Enter] key
+      else {
+         // if the user typed a preset color (eg, "red", "yellow", etc)
+         if (listColors.includes(stringColorInput.join(""))) {
+            newColor = stringColorInput.join("");
+            document.body.style.backgroundColor = newColor;
+            currentBGColor = newColor;
+         }
+         // if the user typed a HEX color (3 or 6 digit)
+         // check if the HEX is valid first
+         else {
+            newColor = "#" + stringColorInput.join("");
+            var reg=/^#([0-9a-f]{3}){1,2}$/i;
+
+            if (reg.test(newColor)) {
+               document.body.style.backgroundColor = newColor;
+               currentBGColor = newColor;
+            }
+         }
+
+         // reset the color input array
+         stringColorInput = [];
+
+         // match the background color of the textfield so that it becomes "invisible"
+         if (stringColorInput == "") {
+            document.getElementById("text").style.backgroundColor = currentBGColor;
+         }
+         document.getElementById("text").innerHTML = stringColorInput;
+      }
+   });
+
+</script>
