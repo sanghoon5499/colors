@@ -1,4 +1,4 @@
-# Multi Mono
+# Colors
 
 Ever wanted a browser tab/window that's just the color you need?\
  https://sanghoon5499.github.io/multi-mono/
