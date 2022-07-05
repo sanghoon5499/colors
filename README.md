@@ -1,7 +1,7 @@
 # black
 
 Ever wanted a browser tab/window that's just the color you need?\
- https://sanghoon5499.github.io/Black-Screen/
+ https://sanghoon5499.github.io/multi-mono/
  
 How to use:
 
