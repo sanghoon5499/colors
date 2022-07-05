@@ -6,8 +6,10 @@ Ever wanted a browser tab/window that's just the color you need?\
 How to use:
 
 1. Choosing a Color
-Select from these colors:\
-|   asd  |     sd    |  ad    |
+- You can use any 3 or 6 digit hex-value (both lower and uppercase work)
+- Or, select from these colors:
+
+|        |           |        |
 | ------ | --------- | ------ |
 | red    | orange    | yellow |
 | lime   | limegreen | green  |
@@ -15,10 +17,7 @@ Select from these colors:\
 | violet | purple    | black  |
 | brown  | gray      | grey   |
 | white  | pink      |        |
+|        |           |        |
 
-\\
-Or, you can use any 3 or 6 digit hex-value
-\
-
-2. Send it!\
-Hit enter once you've typed out what you want and the screen should update.
+2. Send it!
+- Hit enter once you've typed out what you want and the screen should update.
