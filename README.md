@@ -6,8 +6,8 @@ Ever wanted a browser tab/window that's just the color you need?\
 How to use:
 
 1. Choosing a Color
-- You can use any 3 or 6 digit hex-value (both lower and uppercase work)
-- Or, select from these colors:
+- You can type any 3 or 6 digit hex-value (both lower and uppercase work)
+- Or, select (type) from these colors:
 
 |        |           |        |
 | ------ | --------- | ------ |
