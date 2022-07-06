@@ -13,10 +13,10 @@ How to use:
 | ------ | --------- | ------ |
 | red    | orange    | yellow |
 | lime   | limegreen | green  |
-| sky    | skyblue   | blue   |
-| violet | purple    | black  |
-| brown  | gray      | grey   |
-| white  | pink      |        |
+| blue   | skyblue   | violet |
+| purple | black     | brown  |
+| gray   | grey      | white  |
+| pink   |           |        |
 |        |           |        |
 
 2. Send it!
