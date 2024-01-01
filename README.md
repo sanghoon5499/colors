@@ -21,6 +21,7 @@ How to use:
 
 3. Use ChatGPT!
    - Try something like "sunset" and ChatGPT will try its best with coming up with a color most similar to the subject
+   - Due to the way ChatGPT responds, the color might not change as it may return an invalid hex code
 
 
 **Send it!**
