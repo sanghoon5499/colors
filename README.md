@@ -25,3 +25,6 @@ How to use:
 
 **Send it!**
 - Simply hit the [Enter] key and the screen should update.
+
+
+_Note: This is the public repository version of the app, and the code available in this project is not directly functional without some required packages such as node.js, and a valid ChatGPT API key._
